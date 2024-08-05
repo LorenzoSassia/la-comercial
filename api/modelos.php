@@ -96,7 +96,7 @@ class ModeloABM  extends Modelo {
         if($this->limit > 0) {
             $sql .= " LIMIT $this->limit";          
         }
-        echo $sql."<br />"; // Mostramos la instrucciones SQL
+        // echo $sql."<br />"; // Mostramos la instrucciones SQL
         // Ejecutamos la consulta y la guardamos en $resultado
         $resultado = $this->db->query($sql);
         // Guardamos los datos en un array asociativo 
@@ -107,4 +107,28 @@ class ModeloABM  extends Modelo {
         return $datos_json;
     }
 
+    /* 
+    * Inserta datos en una tabla 
+      @param valores Los valores a insertar  
+    */
+    public function insertar($valores){
+        // INSERT INTO productos(codigo, nombre, descripcion, precio) VALUES ('201', 'Samsung A54', 'Procesador...', '150000')
+        $campos = '';
+        $datos = '';
+        // Para cada $valores como $key => $value
+        foreach($valores as $key => $value) {
+            $campos .= $key.",";// Agregamos cada $key a $campos 
+            $datos .= "'".$value."',";// Agregamos cada $value a $datos
+        }
+        // Quitamos el ultimo caracter (,) a los campos y los datos
+        $campos = substr($campos,0,strlen($campos)-1);
+        $datos = substr($datos,0,strlen($datos)-1);
+
+        // Guardamos en $sql la instruccion INSERT
+        $sql = "INSERT INTO $this->tabla ($campos) VALUES ($datos)";
+        echo $sql; // Mostramos la instruccion SQL resultante
+        // Ejecutamos la instruccion SQL
+        $this->db->query($sql);
+    }
+    
 }

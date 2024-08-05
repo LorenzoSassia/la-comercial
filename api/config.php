@@ -7,4 +7,4 @@ define('DB_NAME', 'gestionventas_2024'); // Nombre de la BD MySQL
 define('DB_CHARSET', 'utf8'); // Cotejamiento - Conjunto de caracteres
 ?>
 
-
+ 

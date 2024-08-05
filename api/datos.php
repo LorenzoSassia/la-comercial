@@ -9,7 +9,4 @@ if(isset($_GET['tabla'])) {
     echo $datos;
 }
 
-
-
-
 ?>
