@@ -1,5 +1,33 @@
-import { seleccionarArticulos } from "../modelos/articulos.js";
+import { seleccionarArticulos, insertarArticulos } from "../modelos/articulos.js";
+
+
+/* Objetos del DOM*/
+// Listado de Articulos
 const listado = document.querySelector('#listado');
+
+// Alerta
+const alerta = document.querySelector('#alerta');
+
+// Formulario
+const formulario = document.querySelector('#formulario');
+const formularioModal = new boostrap.modal(document.querySelector('#formularioModal'));
+const btnNuevo = document.querySelector('#btnNuevo');
+
+// Inputs
+const inputCodigo = document.querySelector('#codigo');
+const inputNombre = document.querySelector('#Nombre');
+const inputDescripcion = document.querySelector('#Descripcion');
+const inputPrecio = document.querySelector('#Precio');
+
+// Imagen del formulario
+const frmImagen = document.querySelector('#frmImagen');
+
+// Variables
+let opcion = '';
+let id;
+let mensajeAlerta;
+
+
 
 /**
  *  Esta funcion se ejecuta cuando todo el contenido esta guardado
