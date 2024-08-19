@@ -18,9 +18,9 @@ export async function seleccionarArticulos() {
  * @param datos Los datos a insertar
  */
 export function insertarArticulos(datos) {
-    fetch(`${url}accion=insertar`, {
+    fetch(`${url}&accion=insertar`, {
         method: 'POST',
-        body: datos
+        body: datos  
     })
     .then(res=>res.json())
     .then(data=> {

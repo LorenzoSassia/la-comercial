@@ -52,9 +52,13 @@
     <header class="text-center">
         <h1>Lista de articulos</h1>
     </header>
-    <div class="alerta"></div>
-    <main class="conteiner">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="btnNuevo">
+    <div id="alerta"></div>
+    <main class="container">
+        <button 
+        type="button" 
+        class="btn btn-primary" 
+        data-bs-toggle="modal" 
+        id="btnNuevo">
             Nuevo Articulo
         </button>
         <section>
@@ -142,7 +146,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar Cambios</button>
                     </div>
                 </div>
             </form>
