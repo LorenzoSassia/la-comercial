@@ -137,7 +137,7 @@ class ModeloABM  extends Modelo {
      */
     public function actualizar($valores) {
         // UPDATE productos SET precio = '350000' WHERE id=8
-        $sql = "UPDATE $this->tabla SET";
+        $sql = "UPDATE $this->tabla SET ";
         // Para cada $valores como $key => $value
         foreach($valores as $key => $value) {
             // Agregamosa $sql los campos ($key) y los valores ($value)
@@ -145,7 +145,7 @@ class ModeloABM  extends Modelo {
         }
         $sql = substr($sql,0,strlen($sql)-1); // Quitamos la coma del final
         // Agregamos el criterio
-        $sql .= "WHERE $this->criterio";
+        $sql .= " WHERE $this->criterio";
         echo $sql.'<br>'; // Mostramos la instruccion SQL resultante
         $this->db->query($sql); // Ejecutamos la instruccion
     }
