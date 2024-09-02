@@ -95,7 +95,7 @@
     </footer>
     <div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <form id="formulario">
+            <form id="formulario" enctype="multipart/form-data">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Articulo</h1>
@@ -106,8 +106,13 @@
                         <div class="container-fluid" id="modalContent">
                             <div class="row">
                                 <div class="col-md-5">
-                                    <img src="./imagenes/productos/nodisponible.png" alt="Imagen no disponible"
-                                        id="frmImagen">
+                                   <img src="./imagenes/productos/nodisponible.png" 
+                                        alt="Imagen no disponible"
+                                        id="frmImagen"/>
+                                        <div class="mb-3">
+                                            <label for="imagen" class="form-label">Elegir una imagen</label>
+                                            <input type="file" name="imagen" id="imagen" class="form-control" />
+                                        </div>
                                 </div>
                                 <div class="col-md-7">
                                     <div class="row">
