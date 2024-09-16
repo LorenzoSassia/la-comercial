@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./">La Comercial</a>
+            <a class="navbar-brand" href="./"><img src='./iconos/globe.svg'/> La Comercial</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -42,12 +42,36 @@
                     </li>
 
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <div id="nav-login">
+                    <div id="div-login">
+                <form class="d-flex" id="form-login">
+                    <input 
+                    class="form-control me-2 " 
+                    id="usuario" 
+                    name="usuario"
+                    type="text" 
+                    placeholder="Usuario" 
+                    aria-label="Usuario">
+                    <input 
+                    class="form-control me-2 " 
+                    id="password" 
+                    name="password" 
+                    type="password" 
+                    placeholder="Contraseña" 
+                    aria-label="Contraseña">
+                    <button class="btn btn-outline-success " type="submit">Login</button>
                 </form>
+                    </div>
+                    <div id="div-logout" style="display: none;">
+                        <span id="texto-logueado" class="text-white"></span>
+                        <button id="btn-logout" class="btn btn-outline-primary">
+                            Cerrar sesion 
+                        </button>
+                    </div>
+            </div>
             </div>
         </div>
+        
     </nav>
     <header class="text-center">
         <h1>Lista de articulos</h1>
@@ -163,6 +187,7 @@
         crossorigin="anonymous"></script>
     <script src="./controladores/notapedido.js"></script>
     <script type="module" src="./controladores/lista-articulos.js"></script>
+    <script src="./controladores/login.js"></script>
 </body>
 
 </html>

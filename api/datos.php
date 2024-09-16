@@ -38,7 +38,7 @@ if(isset($_GET['tabla'])) {
                     $mensaje = 'Error: El archivo no fue procesado correctamente';
                 }
             }
-            
+             
         switch($_GET['accion']) {
             case 'seleccionar':
                 $datos = $tabla->seleccionar();
